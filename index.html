@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифратор · фиолетовый</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Шифратор</h1>
+        <p class="subtitle">Цезарь и Атбаш · мягкий фиолет</p>
+        
+        <textarea id="inputText" placeholder="Введи текст..."></textarea>
+        
+        <div class="controls">
+            <select id="cipherMethod" class="custom-select">
+                <option value="caesar">◈ Шифр Цезаря</option>
+                <option value="atbash">◈ Шифр Атбаш</option>
+            </select>
+            
+            <div id="caesarShift" class="shift-control">
+                <label>сдвиг <input type="number" id="shift" value="3" min="1" max="33"></label>
+            </div>
+            
+            <div class="button-group">
+                <button id="encryptBtn">🔒 Зашифровать</button>
+                <button id="decryptBtn">🔓 Расшифровать</button>
+            </div>
+        </div>
+        
+        <textarea id="outputText" placeholder="Результат..." readonly></textarea>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
