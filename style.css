@@ -11,16 +11,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
     margin: 0;
 }
 
 .container {
     max-width: 800px;
     width: 100%;
-    background: #faf5ff;  /* светлый фиолетовый, без прозрачности */
+    background: #faf5ff;
     border-radius: 48px;
-    padding: 2.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 25px 45px -15px rgba(100, 70, 140, 0.4);
     border: 1px solid #d9c5f0;
     transition: transform 0.3s ease;
@@ -31,27 +31,27 @@ body {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #5a3d8c;
     margin-bottom: 0.2rem;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 .subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: #8a6ea9;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid #d9c5f0;
 }
 
 textarea {
     width: 100%;
-    min-height: 140px;
-    padding: 1.3rem 1.5rem;
+    min-height: 120px;
+    padding: 1rem 1.2rem;
     border: 2px solid #d9c5f0;
     border-radius: 32px;
     font-size: 1rem;
@@ -71,33 +71,33 @@ textarea:focus {
 .controls {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem;
     align-items: center;
-    margin: 1.8rem 0;
+    margin: 1.5rem 0;
     background: #ffffff;
-    padding: 1.2rem 1.6rem;
-    border-radius: 48px;
+    padding: 1rem 1.2rem;
+    border-radius: 40px;
     border: 1px solid #d9c5f0;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
 }
 
-/* ===== СТИЛИЗОВАННЫЙ SELECT ===== */
 .custom-select {
     appearance: none;
     -webkit-appearance: none;
     background: #faf5ff;
     border: 2px solid #d3bcf0;
     border-radius: 40px;
-    padding: 0.9rem 2.8rem 0.9rem 1.8rem;
+    padding: 0.7rem 2.5rem 0.7rem 1.5rem;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     color: #3a2b50;
     cursor: pointer;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%236f4f9a" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>');
     background-repeat: no-repeat;
-    background-position: right 1.2rem center;
-    background-size: 1.3rem;
-    min-width: 200px;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    min-width: 180px;
+    flex: 1 1 auto;
     transition: border 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
@@ -113,20 +113,16 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(123, 75, 192, 0.2);
 }
 
-.custom-select option {
-    background: #ffffff;
-    color: #3a2b50;
-}
-/* ===== КОНЕЦ СТИЛИЗАЦИИ SELECT ===== */
-
 .shift-control {
     display: flex;
     align-items: center;
     background: #faf5ff;
-    padding: 0.2rem 0.8rem 0.2rem 1.5rem;
+    padding: 0.1rem 0.5rem 0.1rem 1.2rem;
     border-radius: 40px;
     border: 2px solid #d3bcf0;
     transition: border 0.3s;
+    flex: 1 1 auto;
+    min-width: 150px;
 }
 
 .shift-control:hover {
@@ -136,17 +132,17 @@ textarea:focus {
 .shift-control label {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 0.95rem;
+    gap: 0.5rem;
+    font-size: 0.9rem;
     color: #4a3a5c;
     white-space: nowrap;
 }
 
 .shift-control input {
-    width: 75px;
+    width: 65px;
     border: none;
     background: transparent;
-    padding: 0.7rem 0.2rem;
+    padding: 0.6rem 0.2rem;
     text-align: center;
     font-size: 1rem;
     color: #2e2b3a;
@@ -158,15 +154,17 @@ textarea:focus {
 
 .button-group {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.6rem;
     margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 button {
     border: none;
     border-radius: 40px;
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
     font-weight: 550;
     font-family: 'Inter', sans-serif;
     background: #ffffff;
@@ -174,9 +172,10 @@ button {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     border: 2px solid transparent;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 #encryptBtn {
@@ -215,4 +214,53 @@ button {
 #outputText:focus {
     border: 2px solid #9f7aea;
     background: #ffffff;
+}
+
+/* ----- Адаптация для мобильных устройств (до 600px) ----- */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+    .container {
+        padding: 1.5rem 1rem;
+        border-radius: 32px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    textarea {
+        min-height: 100px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .custom-select, .shift-control, .button-group {
+        width: 100%;
+        min-width: unset;
+    }
+    .shift-control {
+        justify-content: space-between;
+    }
+    .button-group {
+        justify-content: center;
+        margin-left: 0;
+    }
+    button {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    #outputText {
+        min-height: 100px;
+    }
 }
